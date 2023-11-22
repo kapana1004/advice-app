@@ -26,17 +26,20 @@ function App() {
 
   return (
     <div className=" flex justify-center items-center bg-[#202733] min-h-screen min-w-full">
-      <div className=" flex flex-col justify-center items-center w-[343px] h-[315px] bg-[#313A48] relative rounded-[10px] ">
-        <h1 className=" text-[#53FFAA] mb-[15px]"> advice # {adviceNumber} </h1>
-        <p className=" text-[#CEE3E9] text-[24px] w-[295px] h-[150px]">
+      <div className=" flex flex-col justify-center items-center w-[343px] h-[315px] bg-[#313A48] relative rounded-[10px] md:w-[540px] ">
+        <h1 className=" text-[#53FFAA] mb-[15px] ">
+          {" "}
+          advice # {adviceNumber}{" "}
+        </h1>
+        <p className=" text-[#CEE3E9] text-[24px] w-[295px] h-[150px] md:w-[444px] md:text-[28px]">
           {" "}
           {advice}
         </p>
-        <div className=" mt-[20px] w-[295px] flex flex-row justify-around items-center mb-[20px] ">
-          <div className=" w-[122px] h-[1px] bg-[#4F5D74]"></div>
+        <div className=" mt-[20px] w-[295px] flex flex-row justify-around items-center mb-[20px] md:w-[444px] ">
+          <div className=" w-[122px] h-[1px] bg-[#4F5D74] md:w-[196px]"></div>
           <div className=" w-[6px] h-[16px] bg-[#CEE3E9]"></div>
           <div className=" w-[6px] h-[16px] bg-[#CEE3E9]"></div>
-          <div className=" w-[122px] h-[1px] bg-[#4F5D74]"></div>
+          <div className=" w-[122px] h-[1px] bg-[#4F5D74] md:w-[196px]"></div>
         </div>
         <div
           onClick={reloadButton}
