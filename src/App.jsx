@@ -1,8 +1,10 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+import dotIcon from "./assets/images/icon-dice.svg";
 
 function App() {
   const [advice, setAdvice] = useState("");
+  const [adviceNumber, setAdviceNumber] = useState(null);
 
   const reloadButton = () => {
     window.location.reload();
@@ -16,21 +18,34 @@ function App() {
       console.log(data.slip.advice);
 
       setAdvice(data.slip.advice);
+      setAdviceNumber(data.slip.id);
     };
 
     requestAdvice();
   }, []);
 
   return (
-    <div>
-      <h1 className=" text-lime-500">Hello World</h1>
-      <p className=""> {advice}</p>
-      <button
-        onClick={reloadButton}
-        className=" w-[100px] h-[30px] rounded cursor-pointer bg-lime-600"
-      >
-        give advice
-      </button>
+    <div className=" flex justify-center items-center bg-[#202733] w-[375px] min-h-screen   ">
+      <div className=" flex flex-col justify-center items-center w-[343px] h-[315px] bg-[#313A48] relative rounded-[10px] ">
+        <h1 className=" text-[#53FFAA] mb-[15px]"> advice # {adviceNumber} </h1>
+        <p className=" text-[#CEE3E9] text-[24px] w-[295px] h-[150px]">
+          {" "}
+          {advice}
+        </p>
+        <div className=" mt-[20px] w-[295px] flex flex-row justify-around items-center mb-[20px] ">
+          <div className=" w-[122px] h-[1px] bg-[#4F5D74]"></div>
+          <div className=" w-[6px] h-[16px] bg-[#CEE3E9]"></div>
+          <div className=" w-[6px] h-[16px] bg-[#CEE3E9]"></div>
+          <div className=" w-[122px] h-[1px] bg-[#4F5D74]"></div>
+        </div>
+        <div
+          onClick={reloadButton}
+          className=" w-[64px] h-[64px] rounded-full  cursor-pointer bg-[#53FFAA] absolute bottom-[-10%] flex justify-center items-center  "
+        >
+          {" "}
+          <img src={dotIcon} alt="dots" />
+        </div>
+      </div>
     </div>
   );
 }
