@@ -25,7 +25,7 @@ function App() {
   }, []);
 
   return (
-    <div className=" flex justify-center items-center bg-[#202733] w-[375px] min-h-screen   ">
+    <div className=" flex justify-center items-center bg-[#202733] min-h-screen min-w-full">
       <div className=" flex flex-col justify-center items-center w-[343px] h-[315px] bg-[#313A48] relative rounded-[10px] ">
         <h1 className=" text-[#53FFAA] mb-[15px]"> advice # {adviceNumber} </h1>
         <p className=" text-[#CEE3E9] text-[24px] w-[295px] h-[150px]">
