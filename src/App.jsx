@@ -43,7 +43,7 @@ function App() {
         </div>
         <div
           onClick={reloadButton}
-          className=" w-[64px] h-[64px] rounded-full  cursor-pointer bg-[#53FFAA] absolute bottom-[-10%] flex justify-center items-center  "
+          className=" w-[64px] h-[64px] rounded-full  cursor-pointer bg-[#53FFAA] absolute bottom-[-10%] flex justify-center items-center hover:shadow-[0_0_40px_0_rgba(83,255,170,1)]"
         >
           {" "}
           <img src={dotIcon} alt="dots" />
